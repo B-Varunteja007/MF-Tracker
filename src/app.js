@@ -15,7 +15,10 @@ app.use(express.json());
 // Allow requests from frontend
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: ["http://localhost:5173",
+      "https://mf-tracker-frontend.vercel.app"
+    ]
+    
   })
 );
 
